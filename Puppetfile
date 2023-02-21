@@ -9,3 +9,4 @@ mod 'puppetlabs-docker', :latest
 mod 'betadots-hdm', :latest
 mod 'puppet-hiera', :latest
 mod 'puppetlabs-puppetserver_gem', :latest
+mod 'puppetlabs-inifile', :latest
