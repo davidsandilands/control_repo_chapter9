@@ -27,5 +27,17 @@ File { backup => false }
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
-  #   class { 'my_class': }
+  include docker,hdm
+  
+  class { 'hiera':
+  hierarchy            => [
+    'nodes/%{trusted.clientcert}',
+    'os/%{os.family}',
+    'environments/%{trusted.extensions.pp_environment	}',
+    'common',
+  ],
+  eyaml                => true,
+  eyaml_gpg            => true,
+  eyaml_gpg_recipients => 'lab@example.com,david@example.com,someone@example.com',
+  }
 }
