@@ -1,4 +1,4 @@
-forge 'https://forge.puppet.com
+forge 'https://forge.puppet.com'
 
 mod 'puppetlabs-concat', :latest
 mod 'puppetlabs-ruby_task_helper', :latest
