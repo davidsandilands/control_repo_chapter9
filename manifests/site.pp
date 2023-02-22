@@ -29,7 +29,8 @@ node default {
   # Example:
   include docker
   class { 'hdm':
-    hostname => $facts['hostname']
+    hostname => $facts['hostname'],
+    version =>  '1.0.1'
   }  
 
   class { 'hiera':
