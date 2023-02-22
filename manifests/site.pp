@@ -27,8 +27,11 @@ File { backup => false }
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
-  include docker,hdm
-  
+  include docker
+  class { 'hdm:
+    hostname => $facts['hostname']
+  }  
+
   class { 'hiera':
   hierarchy            => [
     'nodes/%{trusted.clientcert}',
