@@ -28,7 +28,7 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   include docker
-  class { 'hdm:
+  class { 'hdm':
     hostname => $facts['hostname']
   }  
 
