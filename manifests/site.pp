@@ -43,11 +43,8 @@ node default {
                                 "options"=> {
                                   "pkcs7_private_key" => '/etc/puppetlabs/puppet/keys/private_key.pkcs7.pem',
                                   "pkcs7_public_key"  => '/etc/puppetlabs/puppet/keys/public_key.pkcs7.pem',
-                                  "gpg_gnupghome"     => '/etc/puppetlabs/puppet/keys/gpg',
                                   }
                            ],
   eyaml                => true,
-  eyaml_gpg            => true,
-  eyaml_gpg_recipients => 'lab@example.com,david@example.com,someone@example.com',
   }
 }
