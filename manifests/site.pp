@@ -34,11 +34,12 @@ node default {
   }  
 
   class { 'hiera':
+  hiera_version        => 5
+  hiera5_defaults      =>  {"datadir" => "data", "data_hash" => "eyaml_data"},
   hierarchy            => [
-    'nodes/%{trusted.clientcert}',
-    'os/%{os.family}',
-    'environments/%{trusted.extensions.pp_environment	}',
-    'common',
+                                {"name" =>  "Role yaml", "paths" =>  ['roles/%{trusted.extensions.pe_role}.eyaml', 'roles/%{trusted.extensions.pp_role}.eyaml']},
+                                {"name" =>  "OS yaml", "path" =>  "os/%{facts.os.family}.eyaml"},
+                                {"name" =>  "Default yaml file", "path" =>  "common.yaml"},
   ],
   eyaml                => true,
   eyaml_gpg            => true,
