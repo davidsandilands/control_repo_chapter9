@@ -37,7 +37,6 @@ node default {
   hiera_version        => '5',
   hiera5_defaults      =>  {"datadir" => "data", "data_hash" => "yaml_data"},
   hierarchy            => [
-                                {
                                 "name" =>  "Example yaml", 
                                 "paths" =>  ['roles/%{trusted.extensions.pe_role}.eyaml', 'roles/%{trusted.extensions.pp_role}.eyaml', 'os/%{facts.os.family}.eyaml', 'common.yaml' ]},
                                 "lookup_key" => 'eyaml_lookup_key',
@@ -45,7 +44,6 @@ node default {
                                   "pkcs7_private_key" => '/etc/puppetlabs/puppet/eyaml/private_key.pkcs7.pem',
                                   "pkcs7_public_key"  => '/etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem',
                                   "gpg_gnupghome"     => '/opt/puppetlabs/server/data/puppetserver/.gnupg',
-                                  }
                            ],
   eyaml                => true,
   eyaml_gpg            => true,
