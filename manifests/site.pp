@@ -34,8 +34,8 @@ node default {
   }  
 
   class { 'hiera':
-  hiera_version        => 5,
-  hiera5_defaults      =>  {"datadir" => "data", "data_hash" => "eyaml_data"},
+  hiera_version        => '5',
+  hiera5_defaults      =>  {"datadir" => "data", "data_hash" => "yaml_data"},
   hierarchy            => [
                                 {"name" =>  "Role yaml", "paths" =>  ['roles/%{trusted.extensions.pe_role}.eyaml', 'roles/%{trusted.extensions.pp_role}.eyaml']},
                                 {"name" =>  "OS yaml", "path" =>  "os/%{facts.os.family}.eyaml"},
