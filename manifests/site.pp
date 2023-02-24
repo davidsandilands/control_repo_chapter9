@@ -32,7 +32,7 @@ node default {
     hostname => $facts['hostname'],
     version =>  '1.0.1'
   }  
-  file { '/secret/example':
+  file { '/var/tmp/secret_example':
     content => lookup('secret::example', undef, undef, 'Not yet set')
   }
   class { 'hiera':
