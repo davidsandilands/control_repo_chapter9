@@ -1,2 +1,2 @@
 ---
-profile::error::example "This node is using common data"
+profile::error::example:"This node is using common data"
